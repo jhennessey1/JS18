@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="inspirationMod">
+	<head>
+		<title>JS18: Inspirational Quotes</title>
+		<link rel="stylesheet" href="main.css"/>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</head>
+	<body ng-controller="inspirationRoller">
+		<div class="title">
+			<h1>Inspirational Quotes</h1>
+		</div>
+		<div class="mainContent">
+			<div class="submissionForm">
+				<form ng-submit="subQuote()">
+					<input type="text" placeholder="Author" ng-model="quote.author">
+					<textarea placeholder="Inspirational Quote..." rows="10" cols="80" ng-model="quote.text"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="quotes">
+				<ul>
+					<li ng-repeat="quote in quotes">
+						{{quote.text}} - {{quote.author}}
+					</li>
+				</ul>
+			</div>
+	</body>
+</html>

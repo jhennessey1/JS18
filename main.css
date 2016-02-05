@@ -1,0 +1,11 @@
+.title {
+	text-align: center;
+	font-family: cursive;
+}
+
+.mainContent {
+	text-align: center;
+	display: block;
+	vertical-align: top;
+	line-height: 50px;
+}
